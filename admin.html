@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin IA - Connexion</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #121212;
+      color: #eee;
+      padding: 2rem;
+    }
+    h1, h2 { color: #00d4ff; }
+    .question {
+      background: #1e1e1e;
+      margin-bottom: 1rem;
+      padding: 1rem;
+      border-radius: 8px;
+    }
+    textarea, input {
+      width: 100%;
+      padding: 0.5rem;
+      margin: 0.5rem 0;
+    }
+    button {
+      margin-right: 0.5rem;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+    }
+    .btn-update { background: #00d4ff; color: black; border: none; }
+    .btn-delete { background: #ff6b35; color: white; border: none; }
+  </style>
+</head>
+<body>
+
+<div id="login-screen">
+  <h2>🔐 Connexion requise</h2>
+  <input type="text" id="login-user" placeholder="Nom d'utilisateur"><br><br>
+  <input type="password" id="login-pass" placeholder="Mot de passe"><br><br>
+  <button onclick="authenticate()">Se connecter</button>
+</div>
+
+<div id="admin-content" style="display: none;">
+  <h1>🧠 Administration - Réponses IA</h1>
+  <div id="questions-container">Chargement...</div>
+</div>
+
+<script>
+  const base = window.location.origin;
+  let authToken = localStorage.getItem("authToken") || "";
+
+  function authenticate() {
+    const user = document.getElementById("login-user").value;
+    const pass = document.getElementById("login-pass").value;
+
+    fetch(`${base}/auth`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ user, pass })
+    }).then(res => res.json())
+      .then(data => {
+        if (data.token) {
+          authToken = data.token;
+          localStorage.setItem("authToken", authToken);
+          document.getElementById("login-screen").style.display = "none";
+          document.getElementById("admin-content").style.display = "block";
+          loadQuestions();
+        } else {
+          alert("❌ Identifiants invalides");
+        }
+      });
+  }
+
+  async function loadQuestions() {
+    const container = document.getElementById("questions-container");
+    container.innerHTML = "";
+
+    const questions = await fetch(`${base}/questions`).then(r => r.json());
+    const responses = await fetch(`${base}/bot-responses`).then(r => r.json());
+
+    if (questions.length === 0) {
+      container.innerHTML = "<p>✅ Aucune question inconnue.</p>";
+      return;
+    }
+
+    questions.forEach(q => {
+      const div = document.createElement("div");
+      div.className = "question";
+      const currentResponse = responses[q] || "";
+
+      div.innerHTML = `
+        <strong>❓ Question :</strong> ${q}<br>
+        <label>💬 Réponse :</label>
+        <textarea rows="2" id="response-${q}">${currentResponse}</textarea>
+        <button class="btn-update" onclick="updateResponse('${q}')">💾 Sauvegarder</button>
+        <button class="btn-delete" onclick="deleteQuestion('${q}')">🗑 Supprimer</button>
+      `;
+      container.appendChild(div);
+    });
+  }
+
+  async function updateResponse(question) {
+    const value = document.getElementById("response-" + question).value.trim();
+    if (!value) return alert("La réponse est vide !");
+    const res = await fetch(`${base}/update-response`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": `Bearer ${authToken}`
+      },
+      body: JSON.stringify({ question, response: value })
+    });
+    if (res.ok) {
+      alert("✅ Réponse mise à jour !");
+      loadQuestions();
+    } else {
+      alert("❌ Erreur !");
+    }
+  }
+
+  async function deleteQuestion(question) {
+    if (!confirm("Supprimer cette question ?")) return;
+    const res = await fetch(`${base}/delete-question`, {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": `Bearer ${authToken}`
+      },
+      body: JSON.stringify({ question })
+    });
+    if (res.ok) {
+      alert("🗑 Supprimée !");
+      loadQuestions();
+    } else {
+      alert("❌ Erreur !");
+    }
+  }
+</script>
+</body>
+</html>
