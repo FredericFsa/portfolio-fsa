@@ -2,7 +2,7 @@
 # 🧠 Portfolio IA – README
 
 Ce projet est un **portfolio interactif intelligent**, combinant un chatbot vocal, une section d'actualités techniques, un espace personnel, et une interface d’administration.
-
+https://fredericfsa.github.io/portfolio-fsa/
 ---
 
 ## 🌐 Structure globale du projet
