@@ -2,6 +2,8 @@
 const Parser = require("rss-parser");
 const fs = require("fs");
 const parser = new Parser();
+const now = new Date();
+const formattedDate = now.toLocaleString("fr-FR");
 
 const feeds = [
   "https://www.developpez.com/rss",
@@ -55,6 +57,7 @@ const BAD_PHRASES = ["comment", "undefined", "lire la suite", "voir plus"];
     </script>
 
 <h1 id="top-anchor" style="padding-top: 100px; margin-top: -30px;">Dernières actualités techniques</h1>
+<p style="text-align:center; font-size: small;">Dernière mise à jour : ${formattedDate}</p>
 `;
 
   for (const url of feeds) {
