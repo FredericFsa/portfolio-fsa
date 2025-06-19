@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Frédéric SALERNO</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+	<link rel="manifest" href="manifest.json">
+
+</head>
+<body>
+    <!-- Navigation -->
+	<div id="header-container"></div>
+
+	<script>
+	  // Récupérer le hash dans l’URL (#about, #contact, etc.)
+	  const anchorHash = window.location.hash;
+
+	  // Charger dynamiquement le menu
+	  fetch("header.html")
+		.then(res => res.text())
+		.then(data => {
+		  document.getElementById("header-container").innerHTML = data;
+
+		  // Si un hash est présent dans l'URL, on force le scroll après chargement
+		  if (anchorHash) {
+			const scrollToAnchor = () => {
+			  const el = document.querySelector(anchorHash);
+			  if (el) {
+				el.scrollIntoView({ behavior: "smooth" });
+			  }
+			};
+			// Petit délai pour être sûr que tout est injecté
+			setTimeout(scrollToAnchor, 100);
+		  }
+		});
+	</script>
+
+
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 id="hero-title">Frédéric SALERNO</h1>
+            <p class="subtitle">Ingénieur industriel</p>
+            <a href="#contact" class="cta-button">Contactez-moi</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="animate-on-scroll">
+        <h2 class="section-title">À propos de moi</h2>
+		
+        <div class="about-content">
+            <div class="profile-image">
+                <img src="Photo.jpg" alt="Photo de profil Frédéric SALERNO" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+            </div>
+            
+
+<div class="about-text">
+                <p>De formation technique dans le monde de l'électronique industriel ainsi qu'une maitrise en électromécanique. Orienté "Broadcast" dans le domaine de la télévision, du web, de la radio et du multimédia.</p>
+                <p>Les équipements "Broadcast" comprennent les domaines suivants : (audio, vidéo, serveurs, réseaux informatiques dédicacés).</p>
+                <p>Mon rôle est de comprendre et d'exploiter rapidement des processus multidisciplinaires mettant en œuvre différentes sciences et techniques, ainsi que de coordonner l'installation des nouveaux systèmes entre les différents corps de métier.</p>
+                <p>Telle est la fonction d'un ingénieur que j'affectionne et qui me passionne.</p>
+            </div>
+        </div>
+    </section>
+
+<div style="margin-top: 3rem;">
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; max-width: 1000px; margin: auto;">
+        <div style="display: flex; flex-direction: column; align-items: center;">
+            <img src="technical-647488_1280.jpg" alt="Carte électronique en macro" style="width: 100%; height: 150px; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.25);">
+
+        </div>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+            <img src="ai-generated-8952422_1280.jpg" alt="Circuit futuriste bleu" style="width: 100%; height: 150px; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.25);">
+
+        </div>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+            <img src="ai-generated-8421119_1280.jpg" alt="Processeur lumineux" style="width: 100%; height: 150px; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.25);">
+
+        </div>
+    </div>
+</div>
+    
+<!-- Diplômes -->
+<section class="animate-on-scroll" style="padding-top: 3rem;">
+    <h2 class="section-title">🎓 Diplômes</h2>
+    <div style="max-width: 800px; margin: auto; padding: 1.5rem; background: var(--card-bg); border-radius: 15px; border: 1px solid rgba(255,255,255,0.1);">
+        <ul style="list-style: none; padding-left: 0; font-size: 1.1rem; line-height: 1.8;">
+            <li><strong>🎓 Ingénieur industriel en électromécanique (Master)</strong></li>
+            <li><strong>🎓 Bachelier en électronique industrielle</strong></li>
+        </ul>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Langues (Images) -->
+<section class="animate-on-scroll" style="padding-top: 2rem;">
+    <h2 class="section-title">🌐 Langues</h2>
+    <div style="max-width: 800px; margin: auto; padding: 1.5rem; background: var(--card-bg); border-radius: 15px; border: 1px solid rgba(255,255,255,0.1);">
+        <ul style="list-style: none; padding-left: 0; font-size: 1.1rem; line-height: 1.8;">
+            <li><img src="fr.png" alt="Français" style="vertical-align: middle; width: 24px; height: 16px; margin-right: 10px;"> <strong>Français</strong> — Langue maternelle</li>
+            <li><img src="gb.png" alt="Anglais" style="vertical-align: middle; width: 24px; height: 16px; margin-right: 10px;"> <strong>Anglais</strong> — Niveau seuil (B1)</li>
+        
+            <li><img src="it.png" alt="Italien" style="vertical-align: middle; width: 24px; height: 16px; margin-right: 10px;"> <strong>Italien</strong> — Notions</li>
+</ul>
+    </div>
+</section>
+<div style="margin-top: 2rem; display: flex; gap: 1rem; justify-content: center; font-size: 1.5rem;">
+			<i class="fas fa-microchip" title="Électronique"></i>
+			<i class="fas fa-tools" title="Maintenance"></i>
+			<i class="fas fa-bolt" title="Énergie / Courant"></i>
+			<i class="fas fa-satellite-dish" title="Télécommunication"></i>
+			<i class="fas fa-screwdriver-wrench" title="Intervention"></i>
+</div>
+
+<!-- Skills Section -->
+    <section id="skills" class="animate-on-scroll">
+        <h2 class="section-title">Compétences Techniques</h2>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h3><i class="fas fa-microchip"></i> Électronique & Matériel</h3>
+                <ul class="skill-list">
+                    <li>Lecture de schémas électroniques</li>
+                    <li>Utilisation d'oscilloscopes & multimètres</li>
+                    <li>Soudure CMS & classique</li>
+                    <li>Bus I2C / SPI / UART</li>
+                    <li>Débogage hardware</li>
+					<li>ARM / RPI / Arduino / STM32</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+				<h3><i class="fas fa-home"></i> Domotique & Alarme</h3>
+				<ul class="skill-list">
+					<li>Installation de systèmes d’alarme</li>
+					<li>Câblage & configuration de capteurs</li>
+					<li>Mise en service et maintenance</li>
+					<li>Intégration domotique simple (éclairage, volets)</li>
+					<li>Suivi des normes de sécurité</li>
+				</ul>
+			</div>
+
+            <div class="skill-category">
+				<h3><i class="fas fa-bolt"></i> Électricité & Installations</h3>
+				<ul class="skill-list">
+					<li>Lecture de plans électriques</li>
+					<li>Câblage et raccordements BT</li>
+					<li>Dépannage et tests (multimètre, isolement)</li>
+					<li>Montage d’armoires électriques</li>
+					<li>Normes RGIE & sécurité électrique</li>
+				</ul>
+			</div>
+            <div class="skill-category">
+			<h3><i class="fas fa-cogs"></i> Électromécanique</h3>
+				<ul class="skill-list">
+					<li>Dépannage de systèmes électromécaniques</li>
+					<li>Moteurs, relais, capteurs, contacteurs</li>
+					<li>Montage, câblage et tests fonctionnels</li>
+					<li>Lecture de plans techniques & mécaniques</li>
+					<li>Maintenance préventive & curative</li>
+				</ul>
+			</div>
+            <div class="skill-category">
+			<h3><i class="fas fa-network-wired"></i> Informatique & IT</h3>
+				<ul class="skill-list">
+					<li>Maintenance PC (hardware & software)</li>
+					<li>Windows, Linux (Ubuntu, Debian), CLI</li>
+					<li>Gestion réseau (IP, DHCP, DNS, VLAN)</li>
+					<li>Dépannage matériel et support utilisateur</li>
+					<li>Outils : Wireshark, Putty, Nagios, Cacti</li>
+				</ul>
+			</div>
+
+            <div class="skill-category">
+			<h3><i class="fas fa-code"></i> Développement & Scripts</h3>
+				<ul class="skill-list">
+					<li>Python (scripts, bots, automatisation)</li>
+					<li>HTML, CSS, JavaScript (DOM, fetch)</li>
+					<li>Bash (scripts systèmes)</li>
+					<li>Node.js, Express.js, API REST</li>
+					<li>JSON, WebSocket, localStorage</li>
+				</ul>
+			</div>
+			<div class="skill-category">
+			<h3><i class="fas fa-lightbulb"></i> Fibre Optique</h3>
+				<ul class="skill-list">
+					<li>Préparation et raccordement de fibres</li>
+					<li>Mesures avec réflectomètre (OTDR)</li>
+					<li>Soudures, épissures et connecteurs SC/LC</li>
+					<li>Tests de continuité et pertes optiques</li>
+					<li>Lecture de plans et schémas optiques</li>
+				</ul>
+			</div>
+			<div class="skill-category">
+			<h3><i class="fas fa-project-diagram"></i> Réseaux IP</h3>
+				<ul class="skill-list">
+					<li>Adressage IP, sous-réseaux, routage de base</li>
+					<li>Switching VLAN, trunk, agrégation de liens</li>
+					<li>Protocoles : TCP/IP, DHCP, DNS, NTP</li>
+					<li>Configuration de switchs Cisco/HP (CLI)</li>
+					<li>Diagnostic & analyse avec Wireshark</li>
+				</ul>
+			</div>
+			<div class="skill-category">
+			<h3><i class="fas fa-broadcast-tower"></i> Audiovisuel & Broadcast</h3>
+			<ul class="skill-list">
+					<li>Exploitation de régies TV / radio</li>
+					<li>Formats audio/vidéo, codecs, SDI, AES/EBU</li>
+					<li>Interphonie, distribution vidéo & synchros (BB/PTP)</li>
+					<li>Dépannage équipements broadcast (mélangeurs, serveurs, matrices)</li>
+					<li>Support technique en direct (émissions, événements)</li>
+			</ul>
+			</div>
+			<div class="skill-category">
+			<h3><i class="fas fa-headset"></i> Interphonie (filaire & sans fil)</h3>
+			<ul class="skill-list">
+					<li>Installation et configuration de systèmes intercom (RTS, Clear-Com...)</li>
+					<li>Réseaux analogiques et numériques (4 fils / IP)</li>
+					<li>Gestion des matrices d’interphonie & panels utilisateurs</li>
+					<li>Intégration avec platines mobiles UHF/DECT</li>
+					<li>Dépannage et suivi qualité audio en production live</li>
+			</ul>
+			</div>
+			<div class="skill-category">
+			<h3><i class="fas fa-tasks"></i> Gestion de Projet</h3>
+			<ul class="skill-list">
+					<li>Planification et coordination technique de projets</li>
+					<li>Suivi de l'avancement, gestion des priorités</li>
+					<li>Collaboration avec les équipes métiers et techniques</li>
+					<li>Utilisation d’Excel pour le suivi de planning et de tâches</li>
+					<li>Capacité à anticiper les risques et résoudre les imprévus</li>
+			</ul>
+			</div>
+			<div class="skill-category">
+			<h3><i class="fas fa-tools"></i> Maintenance & Support Technique</h3>
+			<ul class="skill-list">
+					<li>Diagnostic de pannes matérielles et logicielles</li>
+					<li>Maintenance préventive et curative (audiovisuel, IT, électronique)</li>
+					<li>Intervention sur site et en régie, en conditions réelles</li>
+					<li>Suivi de tickets et documentation des interventions</li>
+					<li>Relation technique avec les utilisateurs et équipes de production</li>
+			</ul>
+			</div>
+			<div class="skill-category">
+				<h3><i class="fas fa-drafting-compass"></i> Dessin Technique & Modélisation</h3>
+				<ul class="skill-list">
+					<li>Conception de schémas électriques, audio/vidéo ou de réseaux</li>
+					<li>Plans techniques avec AutoCAD (implantation, câblage, annotation)</li>
+					<li>Modélisation 3D avec Blender (objets, scènes, animation de base)</li>
+					<li>Conception mécanique et technique avec Fusion 360</li>
+					<li>Réalisation de visuels techniques et rendus pour documentation</li>
+				</ul>
+			</div>
+			<div class="skill-category">
+				<h3><i class="fas fa-robot"></i> Intelligence Artificielle & Automatisation</h3>
+				<ul class="skill-list">
+					<li>Création de chatbot local avec base de données JSON</li>
+					<li>Utilisation d'API (OpenAI, TTS, RSS) pour l’automatisation intelligente</li>
+					<li>Traitement automatique des requêtes inconnues et apprentissage simple</li>
+					<li>Déploiement local via Node.js, intégration avec interface web</li>
+					<li>Expérimentation avec Docker, scripts vocaux, scraping et NLP</li>
+				</ul>
+			</div>
+			<div class="skill-category">
+				<h3><i class="fas fa-image"></i> Création Visuelle avec IA Générative</h3>
+				<ul class="skill-list">
+					<li>Utilisation d'outils comme DALL·E, Stable Diffusion et Leonardo AI</li>
+					<li>Génération d’illustrations thématiques et conceptuelles</li>
+					<li>Exploration de styles artistiques variés (réaliste, cartoon, technique)</li>
+					<li>Amélioration d’images existantes (upscaling, retouche IA)</li>
+					<li>Intégration de visuels IA dans des projets web ou print</li>
+				</ul>
+			</div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="animate-on-scroll">
+        <h2 class="section-title">Expérience Professionnelle</h2>
+        <div class="timeline">
+
+
+			<div class="timeline-item">
+				<div class="timeline-content">
+        <div class="timeline-date">mars 2025 - aujourd'hui</div>
+        <h3>Formations</h3>
+        <p>Formation continue en électromécanique, électronique, DevOps, administration Windows et développement logiciel embarqué temps réel (STM32, C/C++, RTOS, Linux embarqué).</p>
+				</div>
+			</div>
+			<div class="timeline-item">
+				<div class="timeline-content">
+					<div class="timeline-date">mars 2011 - mars 2025</div>
+        <h3>Ingénieur</h3>
+        <h4>Broadcast Service public Belgium</h4>
+        <p>Responsable des opérations et de la maintenance d'une régie de production et de post-production.<br>
+		Supervision technique d’émissions TV et radio en direct et en différé.<br>
+		Expertise en équipements audio/vidéo, réseaux IP, Linux et Windows Server.<br>
+		Coordination d’événements spéciaux et de projets techniques complexes.<br>
+		Référent technique local, formateur et garant de la continuité de service.</p>
+				</div>
+			</div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-date">févr. 2002 - mars 2011</div>
+        <h3>Technicien</h3>
+		<h4>Broadcast Service public Belgium</h4>
+        <p> Responsable des opérations techniques quotidiennes en régie de production et de post-production, assurant la continuité de service pour les émissions TV, en studio comme sur le terrain.<br> 
+		Maintenance préventive et curative de l’infrastructure audiovisuelle : mélangeurs vidéo, matrices audio, synchronisation, câblage, interphonie, serveurs d’ingest, enregistreurs numériques, etc.<br> 
+		Interventions rapides pour résoudre les incidents techniques pendant les directs, souvent sous forte pression.<br> 
+		Manipulation et remplacement de composants électroniques, dépannage sur cartes, reconditionnement de matériel obsolète.<br> 
+		Collaboration avec les équipes de production, IT et son pour garantir la fluidité des tournages.<br> 
+		Compétences acquises : broadcast IP, diagnostic hardware, lecture de plans, gestion de crise, esprit d’analyse, rigueur, documentation technique, travail d’équipe, autonomie, communication interservices, Linux de base, scripting, vidéo SDI, normes AES/EBU, fibre optique, supervision réseau. </p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-date">sept. 2001 - janv. 2002</div>
+        <h3>Technicien électronique</h3>
+        <h4>IXTEM</h4>
+        <p> Chargé de la conversion des distributeurs de boissons électroniques (ex. : canettes Lipton Ice Tea) du franc belge vers l’euro, en adaptant et reprogrammant les monnayeurs. <br> 
+		Assurait la maintenance préventive et corrective des distributeurs automatiques, incluant le diagnostic, la réparation électronique et la remise en service sur site.<br> 
+		Responsable également de l’installation et de la maintenance de systèmes d’alarme dans des bâtiments résidentiels et commerciaux.<br> 
+		Travail polyvalent, mêlant interventions terrain, câblage, configuration d’équipements électroniques et relation client. </p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-date">juil. 1998 - août 2001</div>
+        <h3>Électricien industriel</h3>
+        <h4>Etablissements Luc LACREMANS · Contrat en alternance</h4>
+        <p>Électricien sous-traitance Cockerill Sambre.</p>
+                </div>
+            </div>
+        
+
+</div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="animate-on-scroll">
+        <h2 class="section-title">Contact</h2>
+        <div class="contact-grid">
+        <!--    <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <h3>Email</h3>
+                <p><a href="mailto:frederic.salerno@gmail.com">frederic.salerno@gmail.com</a></p>
+            <!/div>-->
+            <div class="contact-item">
+                <i class="fab fa-linkedin"></i>
+                <h3>LinkedIn</h3>
+                <p><a href="https://linkedin.com/in/frédéric-salerno-94018848" target="_blank">linkedin.com/in/frédéric-salerno-94018848</a></p>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <h3>Localisation</h3>
+                <p><a href="https://www.google.com/maps/place/Li%C3%A8ge,+Belgium/@50.6365,5.5796,12z/data=!3m1!4b1!4m6!3m5!1s0x47c0fa77b3db9e4d:0x1d67e9f4de34a2b3!8m2!3d50.6325574!4d5.5796662!16zL20vMDR4eHI" target="_blank">Belgique (Liège) / Remote</a></p>
+            </div>
+            <div class="contact-item">
+                <i class="fab fa-github"></i>
+                <h3>GitHub</h3>
+                <p><a href="https://github.com/FredericFsa" target="_blank">github.com/FredericFsa</a></p>
+            </div>
+        </div>
+    </section>
+
+<section id="contact" style="padding: 3rem 1rem;">
+        <h2 style="text-align: center;">Contact</h2>
+        <p style="text-align: center;">N'hésitez pas à me laisser un message via ce formulaire :</p>
+        <form action="https://formspree.io/f/xpwrrkbe" method="POST" onsubmit="return checkHumanAnswer();" style="max-width: 600px; margin: 2rem auto;">
+
+            <label for="name">Nom</label><br>
+            <input type="text" id="name" name="name" required style="width: 100%; padding: 10px; margin-bottom: 1rem;"><br>
+
+            <label for="email">Adresse email</label><br>
+            <input type="email" id="email" name="_replyto" required style="width: 100%; padding: 10px; margin-bottom: 1rem;"><br>
+
+            <label for="message">Message</label><br>
+            <textarea id="message" name="message" rows="6" required style="width: 100%; padding: 10px; margin-bottom: 1rem;"></textarea><br>
+             
+			<!-- Question anti-bot aléatoire -->
+			<label id="human-question-label" for="human-check">Vérification humaine :</label>
+			<input type="text" id="human-check" name="human-check" required><br>
+			
+            <button type="submit" style="padding: 12px 24px; background-color: var(--primary-color); color: white; border: none; border-radius: 4px; cursor: pointer;">Envoyer</button>
+        </form>
+        
+</section>
+	
+    <!-- Footer -->
+    <footer>
+        <div class="social-links">
+            <a href="https://github.com/FredericFsa" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/frédéric-salerno-94018848" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://x.com/FredSalerno" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="mailto:frederic.salerno@gmail.com"><i class="fas fa-envelope"></i></a>
+        </div>
+        <p>© 2025 Frédéric SALERNO. Tous droits réservés.</p>
+    </footer>
+	 <!--
+    <div style="margin: 10px;">
+    <label for="voice-select">🎤 Choisir une voix :</label>
+    <select id="voice-select"></select>
+    </div> -->
+
+    <div id="chat-bubble" onclick="toggleChat()">💬</div>
+  
+    <div id="chat-box">
+        <div id="chat-header">Assistant IA <span onclick="toggleChat()" style="float:right; cursor:pointer;">✖</span></div>
+        <div id="chat-messages"></div>
+        <input type="text" id="chat-input" placeholder="Écris ton message..." onkeydown="handleChat(event)">
+    </div>
+	
+    <script src="script.js"></script>
+	<script src="chat_local_tts_male.js"></script>
+	<script src="save_unknown_local.js"></script>
+	<script src="human_check.js"></script>
+
+	<script>
+	if ('serviceWorker' in navigator) {
+		navigator.serviceWorker.register('service-worker.js')
+			.then(reg => console.log("✅ Service Worker enregistré", reg))
+			.catch(err => console.error("❌ Erreur Service Worker", err));
+	}
+</script>
+
+</body>
+</html>
