@@ -14,7 +14,6 @@ Ce projet est un **portfolio interactif intelligent**, combinant un chatbot voca
 ├── style.css                 → Feuille de styles du site
 ├── script.js                 → Smooth scroll et comportements de navigation
 
-├── mon_licenciement.html     → Page personnelle sur une situation vécue
 ├── blog.html                 → Section blog
 ├── actualites_completes.html→ Page générée dynamiquement avec des flux RSS
 
