@@ -28,17 +28,29 @@ app.post('/log-question', (req, res) => {
         return res.status(400).json({ error: 'question invalide' });
     }
 
-    // 1. Ajout dans bot_responses.json
-    let responses = {};
-    if (fs.existsSync(fileBotResponses)) {
-        try {
-            responses = JSON.parse(fs.readFileSync(fileBotResponses, 'utf8'));
-        } catch (err) {
-            console.error("❌ Erreur parsing bot_responses.json :", err);
-        }
-    }
+		// Lecture sécurisée de bot_responses.json
+	let responses = {};
+	if (fs.existsSync(fileBotResponses)) {
+		try {
+			const content = fs.readFileSync(fileBotResponses, 'utf8');
+			responses = JSON.parse(content);
+		} catch (err) {
+			console.error("❌ Erreur lecture bot_responses.json :", err);
+			responses = {}; // Si erreur, on repart avec un objet vide
+		}
+	}
 
-    if (!responses[question]) {
+	// Ne pas réécrire si déjà existant
+	if (!Object.prototype.hasOwnProperty.call(responses, question)) {
+		responses[question] = "Réponse à définir...";
+		try {
+			fs.writeFileSync(fileBotResponses, JSON.stringify(responses, null, 2), 'utf8');
+			console.log("✅ Ajout dans bot_responses :", question);
+		} catch (err) {
+			console.error("❌ Erreur écriture bot_responses.json :", err);
+		}
+	}
+		if (!responses[question]) {
         responses[question] = "Réponse à définir...";
         fs.writeFileSync(fileBotResponses, JSON.stringify(responses, null, 2));
         console.log("✅ Ajout dans bot_responses :", question);
