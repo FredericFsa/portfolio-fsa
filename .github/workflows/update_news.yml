@@ -4,7 +4,7 @@ name: Mise à jour des actualités
 on:
   schedule:
     - cron: '0 4 * * *'  # Tous les jours à 04h00 UTC
-  workflow_dispatch:     # Permet aussi de le lancer manuellement
+  workflow_dispatch:
 
 jobs:
   update-news:
@@ -25,10 +25,18 @@ jobs:
       - name: Exécuter le script pour générer la page d’actualités
         run: node fetch_news.js
 
-      - name: Commit des actualités mises à jour
+      - name: Commit ou commit vide pour forcer GitHub Pages
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           git add actualites_completes.html
-          git commit -m "🔄 Mise à jour automatique des actualités"
+
+          if git diff --cached --quiet; then
+            echo "🟡 Aucun changement détecté — commit vide forcé"
+            git commit --allow-empty -m "🔁 Commit vide pour déclencher mise à jour GitHub Pages"
+          else
+            echo "🟢 Changements détectés — commit normal"
+            git commit -m "🔄 Mise à jour automatique des actualités"
+          fi
+
           git push
