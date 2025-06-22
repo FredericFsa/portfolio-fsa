@@ -39,4 +39,6 @@ jobs:
             git commit -m "🔄 Mise à jour automatique des actualités"
           fi
 
-          git push
+      - name: Push changes
+        run: |
+          git push https://x-access-token:${{ secrets.GH_PAT }}@github.com/FredericFsa/portfolio-fsa.git HEAD:main
