@@ -27,7 +27,6 @@ const feeds = [
   "https://www.01net.com/rss/actualites/",
   "https://rss.nytimes.com/services/xml/rss/nyt/Technology.xml",
   "https://feeds.feedburner.com/TheHackersNews",
-  "https://www.techrepublic.com/rssfeeds/articles/"
 ];
 
 const ARTICLES_PER_FEED = 3;
