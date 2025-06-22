@@ -1,7 +1,19 @@
 
 const Parser = require("rss-parser");
 const fs = require("fs");
-const parser = new Parser();
+const fetch = require("node-fetch");
+
+const parser = new Parser({
+  customFetch: (url, options = {}) => {
+    return fetch(url, {
+      ...options,
+      headers: {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
+        ...(options.headers || {})
+      }
+    });
+  }
+});
 const now = new Date();
 const formattedDate = now.toLocaleString("fr-FR");
 
