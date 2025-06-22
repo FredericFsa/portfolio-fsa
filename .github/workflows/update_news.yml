@@ -1,9 +1,8 @@
-
 name: Mise à jour des actualités
 
 on:
   schedule:
-    - cron: '0 4 * * *'  # Tous les jours à 04h00 UTC
+    - cron: '0 */6 * * *'  # Toutes les 6 heures
   workflow_dispatch:
 
 jobs:
@@ -11,34 +10,22 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Cloner le dépôt
+      - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Installer Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '20'
+      - name: Installer dépendances
+        run: npm install rss-parser node-fetch
 
-      - name: Installer les dépendances
-        run: npm install rss-parser
-
-      - name: Exécuter le script pour générer la page d’actualités
+      - name: Exécuter le script Node.js
         run: node fetch_news.js
 
-      - name: Commit ou commit vide pour forcer GitHub Pages
+      - name: Commit des modifications
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           git add actualites_completes.html
+          git commit -m "🔄 Mise à jour automatique des actualités" || echo "rien à commit"
 
-          if git diff --cached --quiet; then
-            echo "🟡 Aucun changement détecté — commit vide forcé"
-            git commit --allow-empty -m "🔁 Commit vide pour déclencher mise à jour GitHub Pages"
-          else
-            echo "🟢 Changements détectés — commit normal"
-            git commit -m "🔄 Mise à jour automatique des actualités"
-          fi
-
-      - name: Push changes
+      - name: Push avec PAT
         run: |
           git push https://x-access-token:${{ secrets.GH_PAT }}@github.com/FredericFsa/portfolio-fsa.git HEAD:main
