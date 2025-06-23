@@ -1,10 +1,9 @@
 @echo off
-REM Fichier : push_to_github.bat
-REM Description : Ajoute, commit et pousse tous les fichiers vers la branche principale GitHub
+REM Description : Ajoute, commit et pousse les fichiers SAUF ceux exclus dans .gitignore
 
 echo.
-echo === Étape 1 : Ajout de tous les fichiers modifiés ===
-git add -A
+echo === Étape 1 : Ajout des fichiers (sauf ceux exclus dans .gitignore) ===
+git add .
 
 echo.
 set /p message="Message du commit : "
