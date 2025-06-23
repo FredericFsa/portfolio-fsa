@@ -1,69 +1,65 @@
-# 💼 Portfolio Interactif – Frédéric SALERNO
 
-Bienvenue dans le **portfolio personnel** de _Frédéric SALERNO_, ingénieur industriel, combinant design moderne, présentation interactive, chatbot et fonctionnalités PWA.
+# Portfolio de Frédéric Salerno
 
-🔗 Démo en ligne : [https://fredericfsa.github.io/portfolio-fsa](https://fredericfsa.github.io/portfolio-fsa)
-
----
-
-## 📁 Structure des fichiers
-
-```
-.
-├── index.html            → Page principale contenant le contenu du portfolio
-├── header.html           → Menu de navigation injecté dynamiquement
-├── style.css             → Feuille de styles principale (animations, responsive)
-├── script.js             → Effets de scroll, animation des sections, gestion du header
-├── human_check.js        → Système anti-bot simple pour le formulaire (captcha quiz)
-├── service-worker.js     → Mise en cache du site pour PWA
-├── manifest.json         → Configuration pour l'installation en tant qu'application
-├── README.md             → Ce fichier
-```
+Bienvenue sur mon portfolio personnel !  
+Ce site présente mon parcours, mes compétences techniques, mes projets, et offre la possibilité de télécharger mon CV au format PDF.
 
 ---
 
-### 🎨 Portfolio personnel
-- Présentation claire et moderne de ton profil, compétences, expériences et diplômes
-- Sections dynamiques : compétences, langues, expériences, contact
-- Utilisation d’icônes Font Awesome pour chaque domaine
+## 🔍 Présentation
 
-### 📜 Navigation fluide
-- Scroll doux entre sections (ancre)
-- Background adaptatif de la barre de navigation
-- Responsive design : s’adapte aux mobiles et tablettes
+Je suis **Frédéric Salerno**, ingénieur orienté **DevOps, IT & systèmes embarqués**, avec une solide expérience dans les domaines du **broadcast, de l’électronique, des réseaux et du développement logiciel**.
 
-### 🧠 Protection anti-bot
-- `human_check.js` génère des questions simples pour protéger le formulaire de contact contre les bots
-
-### 📲 Progressive Web App (PWA)
-- Fichier `manifest.json` et `service-worker.js` permettant :
-  - Installation comme application mobile
-  - Fonctionnement hors ligne après première visite
+Ce portfolio a été conçu pour être :
+- 💡 Clair, rapide et responsive
+- 🧠 Optimisé pour le SEO
+- 👨‍🦽 Accessible (aria-label, role, etc.)
+- 🛡️ Sécurisé (exclusion des fichiers sensibles)
+- 🚀 Compatible PWA avec support offline
 
 ---
 
+## 📁 Contenu du projet
 
-## 📦 Détails techniques
-
-- Langage principal : HTML / CSS / JavaScript Vanilla
-- Design : Responsive, thème sombre, grid CSS
-- Animations :
-  - Entrées des sections via `IntersectionObserver`
-  - Scroll fluide vers les ancres internes
-- Système PWA :
-  - `service-worker.js` pour cache offline
-  - `manifest.json` pour installation mobile
-
----
-
-
-## 👨‍💻 Auteur
-
-**Frédéric Salerno**  
-📍 Belgique (Liège) / Télétravail  
-🔗 [LinkedIn](https://linkedin.com/in/frédéric-salerno-94018848)  
-🔗 [GitHub](https://github.com/FredericFsa)
+- `index.html` – Page principale optimisée
+- `style.css` – Feuille de style responsive
+- `script.js` – Script interactif
+- `manifest.json` – Fichier PWA
+- `sitemap.xml` – Sitemap pour référencement
+- `robots.txt` – Configuration de crawl
+- `CV_Frederic_Salerno.pdf` – Mon CV téléchargeable
+- `photo-frederic-salerno.jpg` – Photo de profil
+- `service-worker.js` – Pour PWA & mode hors ligne
 
 ---
 
-📅 **Dernière mise à jour** : Juin 2025
+## 🧠 Fonctionnalités intégrées
+
+- 📱 Design adaptatif mobile & desktop
+- 🔍 Balises SEO (meta, OpenGraph, canonical, JSON-LD `Person`)
+- 🧑‍🦯 Accessibilité (`alt`, `aria-label`, `role=main`, etc.)
+- 💾 Téléchargement direct du CV
+- ⚙️ Minification CSS/JS possible
+- 🧼 `.gitignore` pour exclure scripts système (.bat, .js serveur...)
+
+---
+
+## 🚀 Déploiement
+
+Ce portfolio est déployé via **GitHub Pages** :
+
+➡️ [https://fredericfsa.github.io/portfolio/](https://fredericfsa.github.io/portfolio/)
+
+---
+
+## 📬 Contact
+
+Pour toute collaboration ou prise de contact :
+
+📧 Email : [via la page contact](#contact)  
+🔗 LinkedIn : [Mon profil](https://www.linkedin.com/in/frédéric-salerno-94018848/)  
+💻 GitHub : [Mes projets](https://github.com/FredericFsa)
+
+---
+
+> Merci pour votre visite !
