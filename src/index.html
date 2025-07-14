@@ -2,6 +2,15 @@
 
 <html lang="fr">
 <head>
+<base href="/portfolio-fsa/">
+<base href="/portfolio-fsa/">
+<script>
+  if (window.location.hostname === "localhost") {
+    const base = document.querySelector("base");
+    if (base) base.setAttribute("href", "/");
+  }
+</script>
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta content="Portfolio technique de Frédéric Salerno, ingénieur DevOps, Broadcast, IT et IA." name="description"/>
 <meta content="Frédéric Salerno" name="author"/>
@@ -713,7 +722,13 @@ body.edge * {
 <!-- Hero Section -->
 <section class="hero" id="home">
 <div class="hero-content">
-<img alt="Logo Frédéric Salerno" src="./public/splash-screen.png" style="max-width: 300px; width: 100%; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.4); margin-bottom: 1rem;"/>
+<div style="text-align: center;">
+  <img 
+    alt="Logo Frédéric Salerno"
+    src="public/splash-screen.png"
+    style="max-width: 300px; width: 100%; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.4); margin-bottom: 1rem;"
+  />
+</div>
 <p class="subtitle">Ingénieur industriel</p>
 <a aria-label="Aller à la section Contact" class="cta-button" href="#contact">Contactez-moi</a>
 </div>
@@ -723,7 +738,7 @@ body.edge * {
 <h2 class="section-title">À propos de moi</h2>
 <div class="about-content">
 <div class="profile-image">
-<img alt="Photo de profil Frédéric SALERNO" loading="lazy" src="./public/photo-frederic-salerno.jpg" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;"/>
+<img alt="Photo de profil Frédéric SALERNO" loading="lazy" src="public/photo-frederic-salerno.jpg" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;"/>
 </div>
 <div class="about-text">
 <p>De formation technique dans le monde de l'électronique industriel ainsi qu'une maitrise en électromécanique. Orienté "Broadcast" dans le domaine de la télévision, du web, de la radio et du multimédia.</p>
@@ -740,13 +755,13 @@ body.edge * {
 <div style="margin-top: 3rem;">
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; max-width: 1000px; margin: auto;">
 <div style="display: flex; flex-direction: column; align-items: center;">
-<img alt="Carte électronique en macro" loading="lazy" src="./public/img-carte-electronique.jpg" style="width: 100%; height: 150px; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.25);"/>
+<img alt="Carte électronique en macro" loading="lazy" src="public/img-carte-electronique.jpg" style="width: 100%; height: 150px; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.25);"/>
 </div>
 <div style="display: flex; flex-direction: column; align-items: center;">
-<img alt="Circuit futuriste bleu" loading="lazy" src="./public/img-circuit-futuriste.jpg" style="width: 100%; height: 150px; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.25);"/>
+<img alt="Circuit futuriste bleu" loading="lazy" src="public/img-circuit-futuriste.jpg" style="width: 100%; height: 150px; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.25);"/>
 </div>
 <div style="display: flex; flex-direction: column; align-items: center;">
-<img alt="Processeur lumineux" loading="lazy" src="./public/img-processeur-lumineux.jpg" style="width: 100%; height: 150px; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.25);"/>
+<img alt="Processeur lumineux" loading="lazy" src="public/img-processeur-lumineux.jpg" style="width: 100%; height: 150px; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.25);"/>
 </div>
 </div>
 </div>
@@ -774,9 +789,9 @@ body.edge * {
 <h2 class="section-title">🌐 Langues</h2>
 <div style="max-width: 800px; margin: auto; padding: 1.5rem; background: var(--card-bg); border-radius: 15px; border: 1px solid rgba(255,255,255,0.1);">
 <ul style="list-style: none; padding-left: 0; font-size: 1.1rem; line-height: 1.8;">
-<li><img alt="Français" loading="lazy" src="./public/flag-fr.png" style="vertical-align: middle; width: 24px; height: 16px; margin-right: 10px;"/> <strong>Français</strong> — Langue maternelle</li>
-<li><img alt="Anglais" loading="lazy" src="./public/flag-gb.png" style="vertical-align: middle; width: 24px; height: 16px; margin-right: 10px;"/> <strong>Anglais</strong> — Niveau seuil (B1)</li>
-<li><img alt="Italien" loading="lazy" src="./public/flag-it.png" style="vertical-align: middle; width: 24px; height: 16px; margin-right: 10px;"/> <strong>Italien</strong> — Notions</li>
+<li><img alt="Français" loading="lazy" src="public/flag-fr.png" style="vertical-align: middle; width: 24px; height: 16px; margin-right: 10px;"/> <strong>Français</strong> — Langue maternelle</li>
+<li><img alt="Anglais" loading="lazy" src="public/flag-gb.png" style="vertical-align: middle; width: 24px; height: 16px; margin-right: 10px;"/> <strong>Anglais</strong> — Niveau seuil (B1)</li>
+<li><img alt="Italien" loading="lazy" src="public/flag-it.png" style="vertical-align: middle; width: 24px; height: 16px; margin-right: 10px;"/> <strong>Italien</strong> — Notions</li>
 </ul>
 </div>
 </section>
@@ -1161,6 +1176,7 @@ function checkHumanAnswer() {
 }
 
 </script>
+
 
 </body>
 </html><!-- force rebuild -->
