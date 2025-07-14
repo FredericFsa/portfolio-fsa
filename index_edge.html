@@ -2,45 +2,21 @@
 
 <html lang="fr">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+<base href="./"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta content="Portfolio technique de Frédéric Salerno, ingénieur DevOps, Broadcast, IT et IA." name="description"/>
-<meta content="Frédéric Salerno" name="author"/>
+<meta content="Frédéric Salerno" name="author">
 <meta content="Portfolio - Frédéric SALERNO" property="og:title"/>
 <meta content="Découvrez mes compétences en ingénierie, IT, IA, électronique et plus encore." property="og:description"/>
 <meta content="photo-frederic-salerno.jpg" property="og:image"/>
 <meta content="website" property="og:type"/>
 <meta content="https://fredericfsa.github.io/portfolio-fsa/index.html" property="og:url"/>
-
-<link rel="apple-touch-icon" sizes="180x180" href="icon-192.png">
-<link rel="icon" type="image/png" sizes="32x32" href="icon-512.png">
-
-<link href="sitemap.xml" rel="sitemap" title="Sitemap" type="application/xml"/>
-<style>
-@media only screen and (max-width: 768px) {
-    .hero-content, .about-content, .skills-grid, .timeline, .contact-grid {
-        flex-direction: column !important;
-        align-items: center !important;
-    }
-    .skills-grid {
-        grid-template-columns: 1fr !important;
-    }
-    .profile-image {
-        max-width: 200px;
-        margin-bottom: 1rem;
-    }
-}
-</style>
 <meta charset="utf-8"/>
-<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Portfolio - Frédéric SALERNO</title>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
-<link href="style.css" rel="stylesheet"/>
-<link href="manifest.json" rel="manifest"/>
 <link href="https://fredericfsa.github.io/portfolio-fsa/index.html" rel="canonical"/><script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -57,51 +33,31 @@
     "https://github.com/FredericFsa"
   ]
 }
-</script></head>
+</script></meta><link href="style.css" rel="stylesheet"/></head>
+</head>
 <body role="main">
 <!-- Navigation -->
-<div id="header-container"></div>
-<script>
-  // Récupérer le hash dans l’URL (#about, #contact, etc.)
-  const anchorHash = window.location.hash;
-
-  // Charger dynamiquement le menu
-  fetch("header.html")
-    .then(res => res.text())
-    .then(data => {
-      document.getElementById("header-container").innerHTML = data;
-
-      // 🌐 Fix Edge : ajouter effet scroll sur nav *après* l'injection
-      if (!/Edg/.test(navigator.userAgent)) {
-        const nav = document.querySelector("nav");
-        if (nav) {
-          window.addEventListener("scroll", () => {
-            nav.style.background =
-              window.scrollY > 100
-                ? "rgba(10, 10, 10, 0.98)"
-                : "rgba(10, 10, 10, 0.95)";
-          });
-        }
-      }
-
-      // Si un hash est présent dans l'URL, on force le scroll après chargement
-      if (anchorHash) {
-        const scrollToAnchor = () => {
-          const el = document.querySelector(anchorHash);
-          if (el) {
-            el.scrollIntoView({ behavior: "smooth" });
-          }
-        };
-        // Petit délai pour être sûr que tout est injecté
-        setTimeout(scrollToAnchor, 100);
-      }
-    });
-</script>
-
+<!-- Navigation -->
+<nav>
+<div class="nav-container">
+<div class="logo">Portfolio</div>
+<ul class="nav-links">
+<li><a href="index_edge.html#home">Accueil</a></li>
+<li><a href="index_edge.html#about">À propos</a></li>
+<li><a href="index_edge.html#skills">Compétences</a></li>
+<li><a href="index_edge.html#experience">Expérience</a></li>
+<li><a href="index_edge.html#contact">Contact</a></li>
+<!-- <li><a href="actualites_completes.html">Actualités techniques</a></li> -->
+<!-- <li><a href="blog.html">Blog</a></li> -->
+</ul>
+</div>
+</nav>
 <!-- Hero Section -->
 <section class="hero" id="home">
 <div class="hero-content">
+<div style="text-align: center;">
 <img alt="Logo Frédéric Salerno" src="splash-screen.png" style="max-width: 300px; width: 100%; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.4); margin-bottom: 1rem;"/>
+</div>
 <p class="subtitle">Ingénieur industriel</p>
 <a aria-label="Aller à la section Contact" class="cta-button" href="#contact">Contactez-moi</a>
 </div>
@@ -111,7 +67,7 @@
 <h2 class="section-title">À propos de moi</h2>
 <div class="about-content">
 <div class="profile-image">
-<img alt="Photo de profil Frédéric SALERNO" loading="lazy" src="photo-frederic-salerno.jpg" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;"/>
+<img alt="Photo de profil Frédéric SALERNO" src="photo-frederic-salerno.jpg" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;"/>
 </div>
 <div class="about-text">
 <p>De formation technique dans le monde de l'électronique industriel ainsi qu'une maitrise en électromécanique. Orienté "Broadcast" dans le domaine de la télévision, du web, de la radio et du multimédia.</p>
@@ -128,13 +84,13 @@
 <div style="margin-top: 3rem;">
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; max-width: 1000px; margin: auto;">
 <div style="display: flex; flex-direction: column; align-items: center;">
-<img alt="Carte électronique en macro" loading="lazy" src="img-carte-electronique.jpg" style="width: 100%; height: 150px; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.25);"/>
+<img alt="Carte électronique en macro" src="img-carte-electronique.jpg" style="width: 100%; height: 150px; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.25);"/>
 </div>
 <div style="display: flex; flex-direction: column; align-items: center;">
-<img alt="Circuit futuriste bleu" loading="lazy" src="img-circuit-futuriste.jpg" style="width: 100%; height: 150px; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.25);"/>
+<img alt="Circuit futuriste bleu" src="img-circuit-futuriste.jpg" style="width: 100%; height: 150px; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.25);"/>
 </div>
 <div style="display: flex; flex-direction: column; align-items: center;">
-<img alt="Processeur lumineux" loading="lazy" src="img-processeur-lumineux.jpg" style="width: 100%; height: 150px; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.25);"/>
+<img alt="Processeur lumineux" src="img-processeur-lumineux.jpg" style="width: 100%; height: 150px; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.25);"/>
 </div>
 </div>
 </div>
@@ -150,21 +106,21 @@
 </section>
 <!-- Certification -->
 <section class="animate-on-scroll" style="padding-top: 2rem;">
-  <h2 class="section-title">📜 Certification</h2>
-  <div style="max-width: 800px; margin: auto; padding: 1.5rem; background: var(--card-bg); border-radius: 15px; border: 1px solid rgba(255,255,255,0.1);">
-    <ul style="list-style: none; padding-left: 0; font-size: 1.1rem; line-height: 1.8;">
-      <li><strong>📌 Certification : BA5 – Travailler en sécurité sur des installations électriques – personnes qualifiées</strong> — <em>Technifutur, juin 2025</em></li>
-    </ul>
-  </div>
+<h2 class="section-title">📜 Certification</h2>
+<div style="max-width: 800px; margin: auto; padding: 1.5rem; background: var(--card-bg); border-radius: 15px; border: 1px solid rgba(255,255,255,0.1);">
+<ul style="list-style: none; padding-left: 0; font-size: 1.1rem; line-height: 1.8;">
+<li><strong>📌 Certification : BA5 – Travailler en sécurité sur des installations électriques – personnes qualifiées</strong> — <em>Technifutur, juin 2025</em></li>
+</ul>
+</div>
 </section>
 <!-- Langues (Images) -->
 <section class="animate-on-scroll" style="padding-top: 2rem;">
 <h2 class="section-title">🌐 Langues</h2>
 <div style="max-width: 800px; margin: auto; padding: 1.5rem; background: var(--card-bg); border-radius: 15px; border: 1px solid rgba(255,255,255,0.1);">
 <ul style="list-style: none; padding-left: 0; font-size: 1.1rem; line-height: 1.8;">
-<li><img alt="Français" loading="lazy" src="flag-fr.png" style="vertical-align: middle; width: 24px; height: 16px; margin-right: 10px;"/> <strong>Français</strong> — Langue maternelle</li>
-<li><img alt="Anglais" loading="lazy" src="flag-gb.png" style="vertical-align: middle; width: 24px; height: 16px; margin-right: 10px;"/> <strong>Anglais</strong> — Niveau seuil (B1)</li>
-<li><img alt="Italien" loading="lazy" src="flag-it.png" style="vertical-align: middle; width: 24px; height: 16px; margin-right: 10px;"/> <strong>Italien</strong> — Notions</li>
+<li><img alt="Français" src="flag-fr.png" style="vertical-align: middle; width: 24px; height: 16px; margin-right: 10px;"/> <strong>Français</strong> — Langue maternelle</li>
+<li><img alt="Anglais" src="flag-gb.png" style="vertical-align: middle; width: 24px; height: 16px; margin-right: 10px;"/> <strong>Anglais</strong> — Niveau seuil (B1)</li>
+<li><img alt="Italien" src="flag-it.png" style="vertical-align: middle; width: 24px; height: 16px; margin-right: 10px;"/> <strong>Italien</strong> — Notions</li>
 </ul>
 </div>
 </section>
@@ -207,7 +163,7 @@
 <li>Câblage et raccordements BT</li>
 <li>Dépannage et tests (multimètre, isolement)</li>
 <li>Montage d’armoires électriques</li>
-<li>Normes RGIE (Livres 1&2) &amp; sécurité électrique</li>
+<li>Normes RGIE (Livres 1&amp;2) &amp; sécurité électrique</li>
 </ul>
 </div>
 <div class="skill-category">
@@ -458,7 +414,7 @@
 <label for="human-check" id="human-question-label">Vérification humaine :</label>
 <input id="human-check" name="human-check" required="" type="text"/><br/>
 <div style="text-align: right; margin-top: 1rem;">
-  <button style="padding: 12px 24px; background-color: var(--primary-color); color: white; border: none; border-radius: 4px; cursor: pointer;" type="submit">
+<button style="padding: 12px 24px; background-color: var(--primary-color); color: white; border: none; border-radius: 4px; cursor: pointer;" type="submit">
     Envoyer
   </button>
 </div>
@@ -470,37 +426,12 @@
 <a href="https://github.com/FredericFsa" target="_blank"><i class="fab fa-github"></i></a>
 <a href="https://linkedin.com/in/frédéric-salerno-94018848" target="_blank"><i class="fab fa-linkedin"></i></a>
 </div>
-<p>© 2025 Frédéric SALERNO. Tous droits réservés.</p>                          
+<p>© 2025 Frédéric SALERNO. Tous droits réservés.</p>
 </footer>
-<!--
-    <div style="margin: 10px;">
-    <label for="voice-select">🎤 Choisir une voix :</label>
-    <select id="voice-select"></select>
-    </div> 
 
-    <div id="chat-bubble" onclick="toggleChat()">💬</div>
-  
-    <div id="chat-box">
-        <div id="chat-header">Assistant IA <span onclick="toggleChat()" style="float:right; cursor:pointer;">✖</span></div>
-        <div id="chat-messages"></div>
-        <input type="text" id="chat-input" placeholder="Écris ton message..." onkeydown="handleChat(event)">
-    </div> -->
-<script src="script.js" type="module"></script>
-<!-- <script src="chat_local_tts_male.js"></script> -->
+</section>
 <script src="save_unknown_local.js"></script>
 <script src="human_check.js"></script>
-<!-- <script>
-	if ('serviceWorker' in navigator) {
-		navigator.serviceWorker.register('service-worker.js')
-			.then(reg => console.log("✅ Service Worker enregistré", reg))
-			.catch(err => console.error("❌ Erreur Service Worker", err));
-	}
-</script> -->
-</section>
-<div style="text-align: center; margin-top: 2rem;">
-  <script data-goatcounter="https://fredericfsa.goatcounter.com/count"
-          async src="https://gc.zgo.at/count.js"></script>
-  <noscript><p><img src="https://fredericfsa.goatcounter.com/count?p=/visite" alt="visites"></p></noscript>
-</div>
 </body>
-</html><!-- force rebuild -->
+
+</html>
