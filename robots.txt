@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /scripts/
+Allow: /
+Sitemap: https://fredericfsa.github.io/mon-portfolio/sitemap.xml

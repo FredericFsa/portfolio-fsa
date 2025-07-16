@@ -1,0 +1,16 @@
+# ❌ Ne jamais versionner les scripts système ou serveurs locaux
+*.bat
+newServer.js
+start.bat
+
+# 🔒 Fichiers de configuration potentiellement sensibles
+*.env
+*.log
+
+# 📦 Node.js / dépendances (si tu ajoutes un projet Node)
+node_modules/
+npm-debug.log
+
+# 🔧 Fichiers générés automatiquement
+.DS_Store
+Thumbs.db
