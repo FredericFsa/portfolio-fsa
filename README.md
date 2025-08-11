@@ -1,62 +1,69 @@
-# 🌐 Portfolio de Frédéric Salerno
+@'
+# 🌐 Portfolio – Frédéric Salerno
 
-Bienvenue sur le dépôt de mon **portfolio personnel**, développé pour mettre en avant mon profil technique :  
-🎓 ingénieur électromécanicien, passionné par l’IT, l’électronique, le DevOps, la cybersécurité et l’automatisation.
-
----
-
-## 🔎 Aperçu en ligne
-
-📍 Site web :  
-👉 [https://fredericfsa.github.io/portfolio-fsa/](https://fredericfsa.github.io/portfolio-fsa/)
-
-📄 Mon CV est téléchargeable ici : `CV_Frederic_Salerno.pdf`
+Bienvenue sur mon **portfolio en ligne**, présentant mes compétences, certifications, projets techniques et articles de blog.
+Ce site a été conçu en HTML/CSS/JS, avec un design responsive et un thème moderne.
 
 ---
 
-## 🛠️ Technologies utilisées
+## 📄 Contenu du portfolio
 
-- **HTML5 / CSS3**
-- **JavaScript Vanilla**
-- **Responsive Design**
-- **Service Worker (PWA en cours)**
-- **GitHub Pages** pour l’hébergement statique
+### 🏠 Page d’accueil
+- Présentation rapide de mon profil
+- Accès direct : **Certifications**, **Conceptions**, **Blog**
 
----
+### 📜 Certifications & Formations
+- BA5 – Travailler en sécurité sur des installations électriques (Technifutur, 2025)
+- Cisco **CCNA** (ICND1 & ICND2)
+- Fibre optique : conception, épissurage, mesure, maintenance
+- **SMPTE ST 2110 (IP Live)** : essences vidéo/audio/datas, PTP (ST 2059), NMOS (IS-04/05)
 
-## 📁 Structure du projet
+### 🛠 Projets / Conceptions
+- **Application Sudoku Été** : génération, vérification et impression (4×4 à 25×25)
+- **PDF Compressor (Flask + Ghostscript + Docker)**
+- **Secure WiFi QR** : générateur de QR code Wi-Fi sécurisé
+- Autres conceptions (électronique, automatisation, scripts)
 
-```
-📦 portfolio-fsa
-├── index.html                # Page principale du site
-├── style.css                 # Feuille de style principale
-├── script.js                 # Script JavaScript du site
-├── human_check.js           # Script anti-bot / vérification simple
-├── save_unknown_local.js    # Script pour sauvegarde locale (optionnel)
-├── service-worker.js        # Fichier pour support PWA
-│
-├── favicon.ico              # Icône de l'onglet navigateur
-├── manifest.json            # Fichier de configuration PWA
-├── robots.txt               # Fichier pour SEO robots
-├── sitemap.xml              # Fichier SEO sitemap
-│
-├── img-carte-electronique.jpg
-├── img-circuit-futuriste.jpg
-├── img-processeur-lumineux.jpg
-├── photo-frederic-salerno.jpg
-├── splash-screen.png        # Image de splash pour PWA
-├── flag-fr.png              # Drapeau français
-├── flag-gb.png              # Drapeau anglais
-├── flag-it.png              # Drapeau italien
-│
-├── CV_Frederic_Salerno.pdf  # Mon CV en PDF
-│
-│
-├── .nojekyll                # Nécessaire pour GitHub Pages
-└── .gitignore               # Fichiers à ignorer dans Git
-```
+### 📝 Blog
+- **Mesurer l’impédance d’un câble coaxial** (schéma SVG pro)
+- **SMPTE ST 2110 – Guide pratique** (flux séparés, PTP, NMOS, QoS)
 
 ---
 
+## 🚀 Fonctionnalités
+- Design responsive
+- Styles unifiés (nav/footer) sur toutes les pages
+- Schémas **SVG** vectoriels
+- Compatible **GitHub Pages**
 
-© 2025 Frédéric Salerno — Tous droits réservés.
+---
+
+## 📂 Structure
+.
+├── index.html
+├── conceptions.html
+├── blog.html
+├── posts/
+├── assets/
+├── style.css
+├── script.js
+├── manifest.json
+├── service-worker.js
+└── README.md
+
+---
+
+## 🔗 En ligne
+https://fredericfsa.github.io/portfolio-fsa/
+
+## 📬 Contact
+LinkedIn : https://www.linkedin.com/in/fredericsalerno
+Email : (ajouter votre email public)
+
+## ⚖️ Licence
+MIT
+'@ | Set-Content -Encoding UTF8 README.md
+
+git add README.md
+git commit -m "docs: mise à jour du README du portfolio"
+git push origin main
