@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<svg width="1300" height="700" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" version="1.1">
+
+ <g class="layer">
+  <title>Layer 1</title>
+  <rect fill="#ffffff" height="700" id="svg_1" width="1300" x="7" y="-11">T de mesu</rect>
+  <text fill="#2b2b2b" font-family="Inter,Arial" font-size="24" font-weight="600" id="svg_2" text-anchor="middle" x="650" y="50">Mesure d’impédance par réflexion (coax)</text>
+  <rect fill="#f8f9fb" height="120" id="svg_3" rx="10" ry="10" stroke="#2b2b2b" stroke-width="2" width="220" x="160" y="130"/>
+  <text fill="#2b2b2b" font-family="Inter,Arial" font-size="18" font-weight="600" id="svg_4" text-anchor="middle" x="270" y="165">Générateur</text>
+  <text fill="#2b2b2b" font-family="Inter,Arial" font-size="14" font-weight="normal" id="svg_5" text-anchor="middle" x="270" y="190">signal carré</text>
+  <line id="svg_6" stroke="#2b2b2b" stroke-linecap="round" stroke-width="2" x1="185" x2="230" y1="220" y2="220"/>
+  <line id="svg_7" stroke="#2b2b2b" stroke-linecap="round" stroke-width="2" x1="230" x2="230" y1="220" y2="200"/>
+  <line id="svg_8" stroke="#2b2b2b" stroke-linecap="round" stroke-width="2" x1="230" x2="270" y1="200" y2="200"/>
+  <line id="svg_9" stroke="#2b2b2b" stroke-linecap="round" stroke-width="2" x1="270" x2="270" y1="200" y2="220"/>
+  <line id="svg_10" stroke="#2b2b2b" stroke-linecap="round" stroke-width="2" x1="270" x2="315" y1="220" y2="220"/>
+  <line id="svg_11" stroke="#1f77b4" stroke-linecap="round" stroke-width="5" x1="270" x2="270" y1="250" y2="360"/>
+  <circle cx="270" cy="360" fill="#1f77b4" id="svg_12" r="6" stroke="#1f77b4" stroke-width="0"/>
+  <text fill="#666" font-family="Inter,Arial" font-size="14" id="svg_14" text-anchor="end" transform="matrix(1 0 0 1 0 0)" x="246" y="366">T de mesure</text>
+  <line id="svg_15" stroke="#1f77b4" stroke-linecap="round" stroke-width="5" x1="270" x2="720" y1="360" y2="360"/>
+  <rect fill="#f8f9fb" height="130" id="svg_16" rx="10" ry="10" stroke="#2b2b2b" stroke-width="2" width="260" x="720" y="190"/>
+  <text fill="#2b2b2b" font-family="Inter,Arial" font-size="18" font-weight="600" id="svg_17" text-anchor="middle" x="850" y="222">Oscilloscope (CH1)</text>
+  <rect fill="white" height="80" id="svg_18" rx="8" ry="8" stroke="#2b2b2b" stroke-width="1.8" width="212" x="744" y="248"/>
+  <polyline fill="none" id="svg_19" points="752,288 780,268 806,308 832,268 858,308 884,268 910,308" stroke="#ff7f0e" stroke-width="2.4"/>
+  <text fill="#555" font-family="Inter,Arial" font-size="14" font-weight="normal" id="svg_20" text-anchor="middle" x="850" y="415">Mesure sur CH1</text>
+  <line id="svg_21" stroke="#1f77b4" stroke-linecap="round" stroke-width="5" x1="270" x2="270" y1="360" y2="470"/>
+  <rect fill="none" height="120" id="svg_22" rx="5" ry="5" stroke="#777" stroke-width="1.6" width="20" x="260" y="330"/>
+  <line id="svg_23" stroke="#777" stroke-linecap="round" stroke-width="1.8" x1="290" x2="530" y1="390" y2="390"/>
+  <text fill="#2b2b2b" font-family="Inter,Arial" font-size="16" font-weight="normal" id="svg_24" text-anchor="start" x="540" y="395">Câble coaxial à tester</text>
+  <line id="svg_25" stroke="#2b2b2b" stroke-linecap="round" stroke-width="2.2" x1="270" x2="270" y1="470" y2="510"/>
+  <rect fill="white" height="26" id="svg_26" stroke="#2b2b2b" stroke-width="2" width="44" x="248" y="510"/>
+  <line id="svg_27" stroke="#2b2b2b" stroke-linecap="round" stroke-width="2" x1="226" x2="276" y1="494" y2="534"/>
+  <text fill="#2b2b2b" font-family="Inter,Arial" font-size="16" font-weight="normal" id="svg_28" text-anchor="start" x="310" y="540">Résistance variable</text>
+  <line id="svg_29" stroke="#2b2b2b" stroke-linecap="round" stroke-width="2" x1="270" x2="270" y1="536" y2="575"/>
+  <line id="svg_30" stroke="#2b2b2b" stroke-linecap="round" stroke-width="2" x1="254" x2="286" y1="575" y2="575"/>
+  <line id="svg_31" stroke="#2b2b2b" stroke-linecap="round" stroke-width="2" x1="256" x2="284" y1="581" y2="581"/>
+  <line id="svg_32" stroke="#2b2b2b" stroke-linecap="round" stroke-width="2" x1="258" x2="282" y1="587" y2="587"/>
+  <text fill="#2b2b2b" font-family="Inter,Arial" font-size="16" font-weight="normal" id="svg_33" text-anchor="start" x="310" y="590">GND</text>
+  <text fill="#ffffff" font-family="Serif" font-size="19" id="svg_34" stroke="#000000" stroke-width="0" text-anchor="middle" transform="matrix(1 0 0 1 0 0)" x="338" xml:space="preserve" y="340">T de mesure</text>
+ </g>
+</svg>

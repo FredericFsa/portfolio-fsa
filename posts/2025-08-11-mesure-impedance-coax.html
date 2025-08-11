@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mesurer l'impédance d'un câble coaxial avec un oscilloscope</title>
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    .wrap{max-width:820px;margin:auto;padding:2rem}
+    article{background:var(--card-bg);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:1.2rem 1.4rem}
+    h1{margin-top:0}
+    .meta{opacity:.8;margin:.4rem 0 1rem}
+    pre,code{white-space:pre-wrap}
+    img{max-width:100%;display:block;margin:1rem auto}
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <article>
+      <h1>Mesurer l'impédance d'un câble coaxial avec un oscilloscope</h1>
+      <div class="meta">11 août 2025 • Électronique • RF • Mesure</div>
+
+      <p>Voici une méthode simple pour mesurer l’impédance caractéristique <strong>Z₀</strong> d’un câble coaxial, à l’aide d’un générateur de signaux, d’un oscilloscope et d’une résistance variable.</p>
+
+      <h2>1) Matériel nécessaire</h2>
+      <ul>
+        <li>Générateur de signaux (carré rapide)</li>
+        <li>Oscilloscope</li>
+        <li>Câble coaxial à tester</li>
+        <li>Résistance variable (potentiomètre ou boîte à décades)</li>
+        <li>Adaptateurs / connecteurs T BNC</li>
+      </ul>
+
+      <h2>2) Schéma de principe</h2>
+      <img src="../assets/blog/impedance-coax-schema.svg" alt="Schéma mesure impédance câble coaxial" />
+
+      <h2>3) Méthode</h2>
+      <ol>
+        <li>Branche le générateur et l’oscilloscope en parallèle via un T BNC.</li>
+        <li>Connecte le câble à tester à l’autre sortie du T.</li>
+        <li>Laisse l’autre extrémité du câble ouverte, avec la résistance variable entre âme et masse.</li>
+        <li>Envoie un signal carré rapide dans le câble.</li>
+        <li>Observe l’oscilloscope : un rebond (pic) indique un mauvais appairage d’impédance.</li>
+        <li>Ajuste la résistance jusqu’à disparition de la réflexion.</li>
+      </ol>
+
+      <h2>4) Résultat</h2>
+      <p>La valeur de la résistance qui supprime la réflexion correspond à <strong>Z₀</strong> du câble (ex. 50 Ω ou 75 Ω).</p>
+
+      <div class="tip">
+        💡 Astuce : Utilise des câbles courts pour le générateur et l’oscillo afin de réduire les erreurs dues aux longueurs supplémentaires.
+      </div>
+
+      <p><a href="../blog.html">← Retour au blog</a></p>
+    </article>
+  </main>
+</body>
+</html>

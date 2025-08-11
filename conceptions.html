@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Conceptions | Portfolio - Frédéric SALERNO</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="favicon.ico">
+</head>
+<body>
+  <!-- Nav identique à index.html -->
+  <nav>
+    <div class="nav-container">
+      <div class="logo">Portfolio.</div>
+      <ul class="nav-links">
+        <li><a href="index.html#home">Accueil</a></li>
+        <li><a href="index.html#about">À propos</a></li>
+        <li><a href="index.html#skills">Compétences</a></li>
+        <li><a href="index.html#experience">Expérience</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+        <a href="conceptions.html" aria-current="page">Conceptions</a>
+        <a href="blog.html">Blog</a>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="container-wide">
+    <h1 class="section-title">🛠️ Conceptions</h1>
+    <p class="section-subtitle">Petites réalisations perso : électronique, scripts, mini-apps…</p>
+  </header>
+
+  <main class="container-wide">
+    <section class="grid-cards" id="projects">
+      <!-- Exemple de carte -->
+<!-- Carte PDF Compressor SaaS -->
+<article class="card">
+  <img src="assets/conceptions/pdf-compressor.jpg" alt="PDF Compressor SaaS" />
+  <div class="card-body">
+    <h3>PDF Compressor SaaS</h3>
+    <p>Appli web pour compresser des PDFs via Ghostscript : upload, compression automatique et téléchargement. Fonctionne en local et en Docker.</p>
+    <div class="tags">
+      <span class="tag">Python</span>
+      <span class="tag">Flask</span>
+      <span class="tag">Ghostscript</span>
+      <span class="tag">Docker</span>
+      <span class="tag">Bootstrap 5</span>
+    </div>
+    <div class="links">
+      <a class="btn-ghost" href="https://github.com/FredericFsa/pdf_compressor_saas" target="_blank">Code</a>
+    </div>
+  </div>
+</article>
+
+      <!-- Carte application Sudoku -->
+<article class="card">
+  <img src="assets/conceptions/sudoku-preview.jpg" alt="Application Sudoku Été" />
+  <div class="card-body">
+    <h3>Application Sudoku Été</h3>
+    <p>Application web responsive avec génération de grilles (4x4 à 25x25), vérification, solution, thèmes et impression.</p>
+    <div class="tags">
+      <span class="tag">HTML</span>
+      <span class="tag">CSS</span>
+      <span class="tag">JavaScript</span>
+      <span class="tag">Responsive</span>
+    </div>
+    <div class="links">
+      <a class="btn-ghost" href="https://sudoku-ete.onrender.com/" target="_blank">Voir en ligne</a>
+      <a class="btn-ghost" href="https://github.com/FredericFsa/sudoku-ete" target="_blank">Code source</a>
+    </div>
+  </div>
+</article>
+
+<!-- Carte Secure WiFi QR Generator -->
+<article class="card">
+  <img src="assets/conceptions/secure-wifi-qr.jpg" alt="Secure WiFi QR Generator" />
+  <div class="card-body">
+    <h3>Secure WiFi QR Generator</h3>
+    <p>Générateur de QR code WiFi sécurisé permettant de partager facilement un accès réseau sans révéler le mot de passe en clair.</p>
+    <div class="tags">
+      <span class="tag">Python</span>
+      <span class="tag">Flask</span>
+      <span class="tag">QR Code</span>
+      <span class="tag">Sécurité</span>
+    </div>
+    <div class="links">
+      <a class="btn-ghost" href="https://github.com/FredericFsa/secure-wifi-qr" target="_blank">Code</a>
+    </div>
+  </div>
+</article>
+
+    </section>
+  </main>
+
+  <!-- Footer identique -->
+  <footer>
+    <div class="social-links">
+      <a href="https://github.com/FredericFsa" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://linkedin.com/in/frédéric-salerno-94018848" target="_blank"><i class="fab fa-linkedin"></i></a>
+    </div>
+    <p>© 2025 Frédéric SALERNO. Tous droits réservés.</p>
+  </footer>
+
+  <script src="human_check.js"></script>
+</body>
+</html>

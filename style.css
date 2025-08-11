@@ -654,3 +654,64 @@ body.edge * {
     visibility: visible !important;
 }
 
+/* Layout helpers */
+.container-narrow{max-width:900px;margin:auto;padding:2rem 1.25rem}
+.container-wide{max-width:1100px;margin:auto;padding:2rem 1.25rem}
+.section-subtitle{opacity:.9;margin:.5rem 0 1.5rem;text-align:center}
+
+/* Blog */
+.search{margin:1rem 0}
+.search input[type="search"]{
+  width:100%;padding:.8rem 1rem;border-radius:12px;
+  border:1px solid rgba(255,255,255,.2);
+  background:transparent;color:inherit;outline:none
+}
+.post-list{display:grid;gap:1rem}
+.post{
+  background:var(--card-bg);
+  border:1px solid rgba(255,255,255,.1);
+  border-radius:14px;
+  padding:1.2rem 1.4rem;
+  box-shadow:0 6px 24px rgba(0,0,0,.08)
+}
+.post h3{margin:.2rem 0 .4rem}
+.post .meta{opacity:.8;font-size:.95rem;margin:.2rem 0 .6rem}
+.post-read{display:inline-block;margin-top:.4rem}
+
+/* Conceptions (cards grid) */
+.grid-cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:1rem
+}
+.card{
+  background:var(--card-bg);
+  border:1px solid rgba(255,255,255,.1);
+  border-radius:16px;
+  overflow:hidden;
+  box-shadow:0 6px 24px rgba(0,0,0,.12)
+}
+.card img, .card video{
+  width:100%;display:block;aspect-ratio:16/9;object-fit:cover
+}
+.card-body{padding:1rem 1.1rem}
+.card h3{margin:.2rem 0 .5rem}
+.tags{display:flex;flex-wrap:wrap;gap:.4rem;margin:.6rem 0}
+.tag{
+  font-size:.85rem;padding:.2rem .5rem;border-radius:999px;
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.12)
+}
+.links{display:flex;gap:.6rem;margin-top:.6rem}
+.btn-ghost{
+  padding:.45rem .7rem;border:1px solid rgba(255,255,255,.15);
+  border-radius:10px;text-decoration:none;color:inherit
+}
+/* Espacement du haut pour le titre principal sur pages secondaires */
+header.container-wide, header.container-narrow, main.container-wide, main.container-narrow {
+  padding-top: 5rem; /* espace sous la nav */
+}
+
+.section-title {
+  margin-top: 0; /* évite d'ajouter un double espace */
+}

@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Blog | Portfolio - Frédéric SALERNO</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="favicon.ico">
+</head>
+<body>
+  <!-- Nav identique -->
+  <nav>
+    <div class="nav-container">
+      <div class="logo">Portfolio.</div>
+      <ul class="nav-links">
+        <li><a href="index.html#home">Accueil</a></li>
+        <li><a href="index.html#about">À propos</a></li>
+        <li><a href="index.html#skills">Compétences</a></li>
+        <li><a href="index.html#experience">Expérience</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+        <a href="conceptions.html">Conceptions</a>
+        <a href="blog.html" aria-current="page">Blog</a>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="container-narrow">
+    <h1 class="section-title">Blog</h1>
+    <p class="section-subtitle">Conseils courts, tutos rapides, notes de formation.</p>
+  </header>
+
+  <main class="container-wide">
+    <section class="grid-cards">
+<!-- Carte Mesure d'impédance de câble coaxial -->
+<article class="card">
+  <img src="assets/blog/impedance-coax.jpg" alt="Mesure d'impédance d'un câble coaxial" />
+  <div class="card-body">
+    <h3>Mesurer l'impédance d'un câble coaxial</h3>
+    <p>Méthode simple : générateur + oscillo + résistance variable pour trouver Z₀ (50Ω, 75Ω…).</p>
+    <div class="tags">
+      <span class="tag">Électronique</span>
+      <span class="tag">RF</span>
+      <span class="tag">Mesure</span>
+    </div>
+    <div class="links">
+      <a class="btn-ghost" href="assets/blog/impedance-coax-schema.svg" target="_blank">Voir le schéma</a>
+      <a class="btn-ghost" href="posts/2025-08-11-mesure-impedance-coax.html" target="_blank">Explications</a>
+    </div>
+  </div>
+</article>
+
+<!-- Carte ST 2110 -->
+<article class="card">
+  <img src="assets/blog/st2110-preview.jpg" alt="SMPTE ST 2110 - IP Broadcast" />
+  <div class="card-body">
+    <h3>SMPTE ST 2110 - IP Broadcast</h3>
+    <p>Présentation des flux vidéo/audio non compressés sur IP, synchronisation PTP, NMOS et bonnes pratiques réseau.</p>
+    <div class="tags">
+      <span class="tag">Broadcast</span>
+      <span class="tag">Réseaux</span>
+      <span class="tag">ST 2110</span>
+    </div>
+    <div class="links">
+      <a class="btn-ghost" href="posts/2025-08-11-st2110-intro.html" target="_blank">Lire</a>
+    </div>
+  </div>
+</article>
+
+    </section>
+  </main>
+
+  <footer>
+    <div class="social-links">
+      <a href="https://github.com/FredericFsa" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://linkedin.com/in/frédéric-salerno-94018848" target="_blank"><i class="fab fa-linkedin"></i></a>
+    </div>
+    <p>© 2025 Frédéric SALERNO. Tous droits réservés.</p>
+  </footer>
+  <script src="human_check.js"></script>
+</body>
+</html>
