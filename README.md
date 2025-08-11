@@ -58,7 +58,6 @@ https://fredericfsa.github.io/portfolio-fsa/
 
 ## 📬 Contact
 LinkedIn : https://www.linkedin.com/in/fredericsalerno
-Email : (ajouter votre email public)
 
 ## ⚖️ Licence
 MIT
